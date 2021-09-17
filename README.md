@@ -11,4 +11,5 @@ ts-node src/02_StrategyPattern/challenge
 
 // AdapterPattern
 ts-node src/03_AdapterPattern/ducks
+ts-node src/03_AdapterPattern/challenge
 ```
