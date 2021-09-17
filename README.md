@@ -5,6 +5,10 @@ This repository provides TypeScript implementations of the examples in [LinkedIn
 ## How to run examples
 
 ```ts
+// StrategyPattern
 ts-node src/02_StrategyPattern/ducks
 ts-node src/02_StrategyPattern/challenge
+
+// AdapterPattern
+ts-node src/03_AdapterPattern/ducks
 ```

@@ -15,11 +15,13 @@
     "commit": "cz"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "prompts": "^2.4.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@types/lodash": "^4.14.173",
     "@types/node": "^16.9.1",
     "@types/prompts": "^2.0.14",
     "@typescript-eslint/eslint-plugin": "^4.31.1",

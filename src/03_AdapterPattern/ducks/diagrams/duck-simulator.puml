@@ -1,0 +1,40 @@
+@startuml duck-simulator
+
+object DuckSimulator
+
+interface Duck {
+  quack()
+  fly()
+}
+
+class MallardDuck {
+  quack()
+  fly()
+}
+
+Duck <|.. MallardDuck
+
+interface Turkey {
+  gobble()
+  fly()
+}
+
+class WildTurkey {
+  gobble()
+  fly()
+}
+
+Turkey <|.. WildTurkey
+
+class TurkeyAdapter {
+  turkey: Turkey
+  constructor(turkey: Turkey)
+  quack()
+  fly()
+}
+
+Duck <|.. TurkeyAdapter
+Duck o-- DuckSimulator
+Turkey o-- TurkeyAdapter
+
+@enduml
