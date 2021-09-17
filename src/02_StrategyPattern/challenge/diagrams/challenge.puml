@@ -1,0 +1,47 @@
+@startuml solution
+
+package Share <<Rectangle>> {
+  interface ShareStrategy {
+    share()
+  }
+
+  class Txt {
+    share()
+  }
+
+  class Email {
+    share()
+  }
+
+  class Social {
+    share()
+  }
+
+  ShareStrategy <|.. Txt
+  ShareStrategy <|.. Email
+  ShareStrategy <|.. Social
+}
+
+abstract class PhoneCameraApp {
+  shareStrategy: ShareStrategy
+  setShareStrategy(shareStrategy: ShareStrategy)
+  take()
+  {abstract}edit()
+  save()
+  share()
+}
+
+PhoneCameraApp o-- ShareStrategy
+
+class BasicCameraApp {
+  edit()
+}
+
+class CameraPlusApp {
+  edit()
+}
+
+PhoneCameraApp <|-- BasicCameraApp
+PhoneCameraApp <|-- CameraPlusApp
+
+@enduml

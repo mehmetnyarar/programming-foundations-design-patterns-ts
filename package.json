@@ -14,10 +14,14 @@
     "lint": "eslint --fix \"**/*.{js,ts}\"",
     "commit": "cz"
   },
+  "dependencies": {
+    "prompts": "^2.4.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@types/node": "^16.9.1",
+    "@types/prompts": "^2.0.14",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
     "commitizen": "^4.2.4",

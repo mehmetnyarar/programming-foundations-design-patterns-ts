@@ -6,4 +6,5 @@ This repository provides TypeScript implementations of the examples in [LinkedIn
 
 ```ts
 ts-node src/02_StrategyPattern/ducks
+ts-node src/02_StrategyPattern/challenge
 ```
