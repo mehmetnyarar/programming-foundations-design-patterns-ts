@@ -1,0 +1,89 @@
+@startuml mini-duck-simulator
+
+interface QuackBehavior {
+  quack()
+}
+
+class Quack {
+  quack()
+}
+
+class Squeak {
+  quack()
+}
+
+class MuteQuack {
+  quack()
+}
+
+class FakeQuack {
+  quack()
+}
+
+QuackBehavior <|.. Quack
+QuackBehavior <|.. Squeak
+QuackBehavior <|.. MuteQuack
+QuackBehavior <|.. FakeQuack
+
+interface FlyBehavior {
+  fly()
+}
+
+class FlyWithWings {
+  fly()
+}
+
+class FlyNoWay {
+  fly()
+}
+
+class FlyRocketPowered {
+  fly()
+}
+
+FlyBehavior <|.. FlyWithWings
+FlyBehavior <|.. FlyNoWay
+FlyBehavior <|.. FlyRocketPowered
+
+abstract class Duck {
+  flyBehavior: FlyBehavior
+  quackBehavior: QuackBehavior
+  setFlyBehavior()
+  setQuackBehavior()
+  {abstract}display()
+  performFly()
+  performQuack()
+  swim()
+}
+
+Duck o-- FlyBehavior
+Duck o-- QuackBehavior
+
+class MallardDuck {
+  display()
+}
+
+class DecoyDuck {
+  display()
+}
+
+class ModelDuck {
+  display()
+}
+
+class RedHeadDuck {
+  display()
+}
+
+class RubberDuck {
+  constructor(fb?: FlyBehavior, qb?: QuackBehavior)
+  display()
+}
+
+Duck <|-- MallardDuck
+Duck <|-- DecoyDuck
+Duck <|-- ModelDuck
+Duck <|-- RedHeadDuck
+Duck <|-- RubberDuck
+
+@enduml
