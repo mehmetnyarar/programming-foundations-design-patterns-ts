@@ -12,4 +12,7 @@ ts-node src/02_StrategyPattern/challenge
 // AdapterPattern
 ts-node src/03_AdapterPattern/ducks
 ts-node src/03_AdapterPattern/challenge
+
+// Observer Pattern
+ts-node src/04_ObserverPattern/simple
 ```

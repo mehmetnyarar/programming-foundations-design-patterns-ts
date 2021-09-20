@@ -1,0 +1,35 @@
+@startuml observer-pattern-simple
+
+interface Subject {
+  registerObserver()
+  removeObserver()
+  notifyObservers()
+}
+
+interface Observer {
+  update()
+}
+
+class SimpleSubject {
+  observers: Observer[] = []
+  value: number = 0
+  registerObserver(observer: Observer)
+  removeObserver(observer: Observer)
+  notifyObservers()
+  setValue(value: number)
+}
+
+class SimpleObserver {
+  simpleSubject: Subject
+  value: number
+  constructor(simpleSubject: Subject)
+  update(value: number)
+  dispay()
+}
+
+Subject <|-- SimpleSubject
+Observer <|-- SimpleObserver
+Observer "0..*" o-- "1" SimpleSubject
+Subject o-- SimpleObserver
+
+@enduml
