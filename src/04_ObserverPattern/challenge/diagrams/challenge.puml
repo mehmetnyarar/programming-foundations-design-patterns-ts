@@ -1,0 +1,73 @@
+@startuml challenge
+
+class WeatherStation {
+  temperature
+  windSpeed
+  pressure
+}
+
+class UserInterface {
+  display()
+}
+
+class Logger {
+  log()
+}
+
+class AlertSystem {
+  alert()
+}
+
+@enduml
+
+@startuml solution
+
+interface Subject {
+  registerObserver()
+  removeObserver()
+  notifyObservers()
+}
+
+interface Observer {
+  update()
+}
+
+class WeatherStation {
+  temperature
+  windSpeed
+  pressure
+}
+
+Subject <|-- WeatherStation
+Observer "many" o-- "1" WeatherStation
+
+rectangle Observers {
+  class UserInterface {
+    weatherStation: Subject
+    display()
+    update()
+  }
+
+  Subject o-- UserInterface
+  Observer <|-- UserInterface
+
+  class Logger {
+    weatherStation: Subject
+    log()
+    update()
+  }
+
+  Subject o-- Logger
+  Observer <|-- Logger
+
+  class AlertSystem {
+    weatherStation: Subject
+    alert()
+    update()
+  }
+
+  Subject o-- AlertSystem
+  Observer <|-- AlertSystem
+}
+
+@enduml

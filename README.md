@@ -15,4 +15,12 @@ ts-node src/03_AdapterPattern/challenge
 
 // Observer Pattern
 ts-node src/04_ObserverPattern/simple
+ts-node src/04_ObserverPattern/challenge
 ```
+
+## Notes
+
+- Observer Pattern
+  - The challenge and the solution are different than the code in the exercise files
+  - Loose coupling is not utilized for some of the concrete observers
+  - TODO: UML is confusing; provide a better diagram
