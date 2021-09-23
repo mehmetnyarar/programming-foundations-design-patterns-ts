@@ -1,0 +1,43 @@
+@startuml solution
+
+abstract Pizza {
+  #description
+  getDescription()
+  {abstract}cost()
+}
+
+class ThinCrustPizza {
+  cost()
+}
+
+class ThickCrustPizza {
+  cost()
+}
+
+Pizza <|-- ThinCrustPizza
+Pizza <|-- ThickCrustPizza
+
+abstract ToppingDecorator {
+  #pizza: Pizza
+  {abstract}getDescription()
+}
+
+Pizza <|-- ToppingDecorator
+
+class Cheese {
+  getDescription()
+  cost()
+}
+
+class Olives {
+  getDescription()
+  cost()
+}
+
+ToppingDecorator <|-- Cheese
+ToppingDecorator <|-- Olives
+
+Pizza *-- Cheese
+Pizza *-- Olives
+
+@enduml
