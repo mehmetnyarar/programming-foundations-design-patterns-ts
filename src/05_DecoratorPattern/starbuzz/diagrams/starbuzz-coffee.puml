@@ -1,0 +1,69 @@
+@startuml starbuzz-coffee
+
+abstract Beverage {
+  #getDescription()
+  {abstract}cost()
+}
+
+class HouseBlend {
+  cost()
+}
+
+class DarkRoast {
+  cost()
+}
+
+class Decaf {
+  cost()
+}
+
+class Espresso {
+  cost()
+}
+
+Beverage <|-- HouseBlend
+Beverage <|-- DarkRoast
+Beverage <|-- Decaf
+Beverage <|-- Espresso
+
+abstract CondimentDecorator {
+  {abstract}getDescription()
+}
+
+Beverage <|-- CondimentDecorator
+
+class Milk {
+  -beverage: Beverage
+  getDescription()
+  cost()
+}
+
+class Soy {
+  -beverage: Beverage
+  getDescription()
+  cost()
+}
+
+class Mocha {
+  -beverage: Beverage
+  getDescription()
+  cost()
+}
+
+class Whip {
+  -beverage: Beverage
+  getDescription()
+  cost()
+}
+
+CondimentDecorator <|-- Milk
+CondimentDecorator <|-- Soy
+CondimentDecorator <|-- Mocha
+CondimentDecorator <|-- Whip
+
+Beverage o-- Milk
+Beverage o-- Soy
+Beverage o-- Mocha
+Beverage o-- Whip
+
+@enduml

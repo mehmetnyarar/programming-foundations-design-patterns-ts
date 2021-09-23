@@ -16,6 +16,9 @@ ts-node src/03_AdapterPattern/challenge
 // Observer Pattern
 ts-node src/04_ObserverPattern/simple
 ts-node src/04_ObserverPattern/challenge
+
+// Decorator Pattern
+ts-node src/05_DecoratorPattern/starbuzz
 ```
 
 ## Notes
