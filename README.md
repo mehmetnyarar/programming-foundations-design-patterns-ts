@@ -23,6 +23,9 @@ ts-node src/05_DecoratorPattern/challenge
 
 // Decorator Pattern
 ts-node src/06_IteratorPattern/cafe
+
+// Factory Pattern
+ts-node src/07_FactoryPattern/pizzas
 ```
 
 ## Notes
