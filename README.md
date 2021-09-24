@@ -26,6 +26,7 @@ ts-node src/06_IteratorPattern/cafe
 
 // Factory Pattern
 ts-node src/07_FactoryPattern/pizzas
+ts-node src/07_FactoryPattern/pizzafm
 ```
 
 ## Notes
