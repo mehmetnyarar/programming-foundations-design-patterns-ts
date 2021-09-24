@@ -30,4 +30,6 @@ ts-node src/06_IteratorPattern/cafe
 - Observer Pattern
   - The challenge and the solution are different than the code in the exercise files
   - Loose coupling is not utilized for some of the concrete observers
-  - TODO: UML is confusing; provide a better diagram
+  - [ ] TODO: UML is confusing; provide a better diagram
+- Iterator Pattern
+  - [ ] TODO: Implement challenge (dinermerger)
