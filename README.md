@@ -20,6 +20,9 @@ ts-node src/04_ObserverPattern/challenge
 // Decorator Pattern
 ts-node src/05_DecoratorPattern/starbuzz
 ts-node src/05_DecoratorPattern/challenge
+
+// Decorator Pattern
+ts-node src/06_IteratorPattern/cafe
 ```
 
 ## Notes
